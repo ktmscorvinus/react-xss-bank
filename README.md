@@ -1,7 +1,5 @@
 # react-xss-bank
 
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/ktmscorvinus/react-xss-bank)
-
 XSS Sebezhetőségek Kihasználása és Megelőzése
 Bevezetés
 A Cross-Site Scripting (XSS) egy webes biztonsági sebezhetőség, amely lehetővé teszi a támadók számára, hogy rosszindulatú szkripteket futtassanak a felhasználók böngészőjében. Az XSS támadások célja lehet adatlopás, felhasználói fiókok eltérítése, vagy kártékony kódok végrehajtása. Három fő típusa van:
