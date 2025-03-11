@@ -43,18 +43,6 @@ export default function App() {
         <button type="submit">Deposit</button>
       </form>
 
-      {/* Stored XSS - displaying user comments unsafely */}
-      <h3>Comments:</h3>
-      <form onSubmit={handleCommentSubmit}>
-        <input type="text" name="comment" placeholder="Leave a comment" />
-        <button type="submit">Submit</button>
-      </form>
-      <ul>
-        {comments.map((c, index) => (
-          <li key={index} dangerouslySetInnerHTML={{ __html: c }}></li>
-        ))}
-      </ul>
-
       {/* DOM-based XSS - modifying the DOM unsafely */}
       <h3>Search Transactions:</h3>
       <input
@@ -67,6 +55,19 @@ export default function App() {
         placeholder="Search..."
       />
       <div id="searchResults"></div>
+
+        {/* Stored XSS - displaying user comments unsafely */}
+      <h3>Comments:</h3>
+      <form onSubmit={handleCommentSubmit}>
+        <input type="text" name="comment" placeholder="Leave a comment" />
+        <button type="submit">Submit</button>
+      </form>
+      <ul>
+        {comments.map((c, index) => (
+          <li key={index} dangerouslySetInnerHTML={{ __html: c }}></li>
+        ))}
+      </ul>
+
     </div>
   );
 }
